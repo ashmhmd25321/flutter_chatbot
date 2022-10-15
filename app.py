@@ -82,7 +82,8 @@ def response():
     #res = "Hey BRO" + time.ctime()
     #return jsonify({"response" : res})
     query = dict(request.form)['query']
-    res = time.ctime()
+    userText = request.args.get('msg')
+    res = chatbot_response(userText)
     return jsonify({"response" : res})
 
 if __name__ == "__main__":
