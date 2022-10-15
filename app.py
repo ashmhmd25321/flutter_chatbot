@@ -1,3 +1,4 @@
+import time
 import nltk
 nltk.download('popular')
 from nltk.stem import WordNetLemmatizer
@@ -81,8 +82,11 @@ def home():
 
 @app.route("/get", methods=["GET", "POST"])
 def get_bot_response():
-    userText = request.args.get('msg')
-    return jsonify({ "response": chatbot_response(userText)})
+    query = dict(request.form)['query']
+    res = query + " " + time.ctime()
+    return jsonify({"response" : res})
+    #userText = request.args.get('msg')
+    #return jsonify({ "response": chatbot_response(userText)})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0",)
