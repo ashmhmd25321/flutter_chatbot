@@ -79,10 +79,10 @@ app.static_folder = 'static'
 def home():
     return render_template("index.html")
 
-@app.route("/get", methods=["POST"])
+@app.route("/get", methods=["GET", "POST"])
 def get_bot_response():
     userText = request.args.get('msg')
     return jsonify(chatbot_response(userText))
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0",)
+    app.run()
