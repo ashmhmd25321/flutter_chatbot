@@ -11,6 +11,13 @@ from keras.layers import Dense, Activation, Dropout
 from keras.optimizers import SGD
 import random
 
+import tensorflow as tf
+
+with tf.device('/CPU:0'):
+  a = tf.constant([[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]])
+  b = tf.constant([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]])
+  # Any additional tf code placed in this block will be executed on the CPU
+
 words = []
 classes = []
 documents = []

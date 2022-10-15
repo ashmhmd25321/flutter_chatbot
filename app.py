@@ -12,16 +12,12 @@ import random
 intents = json.loads(open('data.json').read())
 words = pickle.load(open('texts.pkl','rb'))
 classes = pickle.load(open('labels.pkl','rb'))
-
-import os
 import tensorflow as tf
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
-
-if tf.test.gpu_device_name():
-    print('GPU found')
-else:
-    print("No GPU found")
+with tf.device('/CPU:0'):
+  a = tf.constant([[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]])
+  b = tf.constant([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]])
+  # Any additional tf code placed in this block will be executed on the CPU
 
 def clean_up_sentence(sentence):
     # tokenize the pattern - split words into array
