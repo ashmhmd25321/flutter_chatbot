@@ -81,7 +81,7 @@ def home():
     return render_template("index.html")
 
 @app.route("/get", methods=["GET", "POST"])
-def get_bot_response():
+def response():
     query = dict(request.form)['query']
     res = query + " " + time.ctime()
     return jsonify({"response" : res})
