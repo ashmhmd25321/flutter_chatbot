@@ -75,7 +75,7 @@ from flask import Flask, jsonify, render_template, request
 app = Flask(__name__)
 app.static_folder = 'static'
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def home():
     return render_template("index.html")
 
@@ -85,4 +85,4 @@ def get_bot_response():
     return jsonify(chatbot_response(userText))
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0",)
