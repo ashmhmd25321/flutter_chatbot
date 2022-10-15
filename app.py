@@ -76,13 +76,16 @@ from flask import Flask, jsonify, render_template, request
 app = Flask(__name__)
 app.static_folder = 'static'
 
-@app.route("/", methods=["POST"])
+@app.route("/get", methods=["POST"])
 def response():
     query = dict(request.form)['query']
     res = query + " " + time.ctime()
     return jsonify({"response" : res})
-    #userText = request.args.get('msg')
-    #return jsonify({ "response": chatbot_response(userText)})
+
+#@app.route("/get", methods=["GET", "POST"])
+#def response():
+ #   userText = request.args.get('msg')
+  #  return jsonify(chatbot_response(userText))
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0",)
