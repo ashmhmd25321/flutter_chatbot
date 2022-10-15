@@ -79,7 +79,7 @@ app.static_folder = 'static'
 @app.route("/get", methods=["POST"])
 def response():
     query = dict(request.form)['query']
-    res = "Hey BRO"
+    res = "Hey BRO" + time.ctime()
     return jsonify({"response" : res})
     #query = dict(request.form)['query']
     #userText = request.args.get('msg')
