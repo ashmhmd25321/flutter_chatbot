@@ -82,7 +82,7 @@ def home():
 @app.route("/get", methods=["GET", "POST"])
 def get_bot_response():
     userText = request.args.get('msg')
-    return jsonify(chatbot_response(userText))
+    return jsonify({ "response": chatbot_response(userText)})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0",)
