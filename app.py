@@ -76,10 +76,6 @@ from flask import Flask, jsonify, render_template, request
 app = Flask(__name__)
 app.static_folder = 'static'
 
-@app.route("/", methods=["GET", "POST"])
-def home():
-    return render_template("index.html")
-
 @app.route("/get", methods=["POST"])
 def response():
     query = dict(request.form)['query']
