@@ -83,7 +83,7 @@ def response():
     #return jsonify({"response" : res})
     query = dict(request.form)['query']
     userText = request.args.get('msg')
-    return jsonify({"response" : userText})
+    return jsonify({"response" : chatbot_response(userText)})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0",)
