@@ -78,11 +78,11 @@ app.static_folder = 'static'
 
 @app.route("/get", methods=["POST"])
 def response():
-    #query = dict(request.form)['query']
+    query = dict(request.form)['query']
     #res = "Hey BRO" + time.ctime()
     #return jsonify({"response" : res})
-    userText = request.args.get('msg')
-    res = chatbot_response(userText)
+    #userText = request.args.get('msg')
+    res = chatbot_response(query)
     return jsonify(res)
 
 if __name__ == "__main__":
