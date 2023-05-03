@@ -12,9 +12,45 @@
         "Good day"
       ],
       "responses": [
-        "Hello, thanks for asking",
-        "Good to see you again",
+        "Hello, what can i do for you?",
         "Hi there, how can I help?"
+      ],
+      "context": [""]
+    },
+     {
+      "tag": "get_info",
+      "patterns": [
+        "Tell me about the North Central Province",
+        "What can I do in the North Central Province?",
+        "What are some attractions in the North Central Province?",
+        "I want to learn more about the North Central Province"
+      ],
+      "responses": [
+        "The North Central Province of Sri Lanka is known for its rich history and cultural heritage. You can visit the ancient city of Anuradhapura, the ruins of Polonnaruwa, or the majestic Sigiriya rock fortress. There are also many national parks and wildlife reserves in the area, such as Minneriya National Park and Wilpattu National Park. <a href='https://www.bing.com/maps?q=north+central+province&FORM=HDRSC7&cp=8.335354%7E80.410111&lvl=9.8'>Show on Google Map</a>  Let me know if you have any other questions!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "get_directions",
+      "patterns": [
+        "How do I get to the North Central Province?",
+        "What's the best way to travel to the North Central Province?",
+        "Can you give me directions to the North Central Province?"
+      ],
+      "responses": [
+        "The North Central Province is located in the northern part of Sri Lanka. The easiest way to get there is by car or bus from Colombo, the capital city. There are also flights to nearby cities such as Anuradhapura or Sigiriya. Once you arrive, there are many local transportation options available to get around the area. <a href='https://www.bing.com/maps?q=north+central+province&FORM=HDRSC7&cp=8.335354%7E80.410111&lvl=9.8'>Show on Google Map</a>"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "find_accommodation",
+      "patterns": [
+        "Where can I stay in the North Central Province?",
+        "What are some good hotels in the area?",
+        "I need a place to stay in the North Central Province"
+      ],
+      "responses": [
+        "There are many accommodation options available in the North Central Province, ranging from budget guesthouses to luxury hotels. Some popular options include the Cinnamon Lodge Habarana, Jetwing Vil Uyana, and Ulagalla Resort. Let me know if you need help making a reservation or finding a specific type of accommodation. <a href='http://bitly.ws/DUof'>Show on Google Map</a>"
       ],
       "context": [""]
     },
@@ -28,131 +64,22 @@
         "Till next time"
       ],
       "responses": [
-        "See you!",
-        "Have a nice day",
-        "Bye! Come back again soon."
+        "Thanks for chatting with me! Enjoy your visit to the North Central Province of Sri Lanka.",
+        "Take care and have a great time in the North Central Province!",
+        "Goodbye! Don't hesitate to contact me again if you need further assistance."
       ],
       "context": [""]
     },
     {
-      "tag": "thanks",
+      "tag": "food_and_drinks",
       "patterns": [
-        "Thanks",
-        "Thank you",
-        "That's helpful",
-        "Awesome, thanks",
-        "Thanks for helping me"
-      ],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"],
-      "context": [""]
-    },
-    {
-      "tag": "noanswer",
-      "patterns": [],
-      "responses": [
-        "Sorry, can't understand you",
-        "Please give me more info",
-        "Not sure I understand"
-      ],
-      "context": [""]
-    },
-    {
-      "tag": "options",
-      "patterns": [
-        "How you could help me?",
-        "What you can do?",
-        "What help you provide?",
-        "How you can be helpful?",
-        "What support is offered"
+        "Where can I find good food in the North Central Province?",
+        "What are some local dishes I should try?",
+        "I'm hungry, where should I go to eat?"
       ],
       "responses": [
-        "I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies",
-        "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"
+        "The North Central Province is known for its unique cuisine, which includes dishes such as kottu roti, hoppers, and string hoppers. Some popular restaurants in the area include the Habarana Village by Cinnamon, The Lake Hotel Polonnaruwa, and Athula's Kitchen. Let me know if you need help making a reservation or finding a specific type of cuisine."
       ],
-      "context": [""]
-    },
-    {
-      "tag": "adverse_drug",
-      "patterns": [
-        "How to check Adverse drug reaction?",
-        "Open adverse drugs module",
-        "Give me a list of drugs causing adverse behavior",
-        "List all drugs suitable for patient with adverse reaction",
-        "Which drugs dont have adverse reaction?"
-      ],
-      "responses": ["Navigating to Adverse drug reaction module"],
-      "context": [""]
-    },
-    {
-      "tag": "blood_pressure",
-      "patterns": [
-        "Open blood pressure module",
-        "Task related to blood pressure",
-        "Blood pressure data entry",
-        "I want to log blood pressure results",
-        "Blood pressure data management"
-      ],
-      "responses": ["Navigating to Blood Pressure module"],
-      "context": [""]
-    },
-    {
-      "tag": "blood_pressure_search",
-      "patterns": [
-        "I want to search for blood pressure result history",
-        "Blood pressure for patient",
-        "Load patient blood pressure result",
-        "Show blood pressure results for patient",
-        "Find blood pressure results by ID"
-      ],
-      "responses": ["Please provide Patient ID", "Patient ID?"],
-      "context": ["search_blood_pressure_by_patient_id"]
-    },
-    {
-      "tag": "search_blood_pressure_by_patient_id",
-      "patterns": [],
-      "responses": ["Loading Blood pressure result for Patient"],
-      "context": [""]
-    },
-    {
-      "tag": "pharmacy_search",
-      "patterns": [
-        "Find me a pharmacy",
-        "Find pharmacy",
-        "List of pharmacies nearby",
-        "Locate pharmacy",
-        "Search pharmacy"
-      ],
-      "responses": ["Please provide pharmacy name"],
-      "context": ["search_pharmacy_by_name"]
-    },
-    {
-      "tag": "search_pharmacy_by_name",
-      "patterns": [],
-      "responses": ["Loading pharmacy details"],
-      "context": [""]
-    },
-    {
-      "tag": "hospital_search",
-      "patterns": [
-        "Lookup for hospital",
-        "Searching for hospital to transfer patient",
-        "I want to search hospital data",
-        "Hospital lookup for patient",
-        "Looking up hospital details"
-      ],
-      "responses": ["Please provide hospital name or location"],
-      "context": ["search_hospital_by_params"]
-    },
-    {
-      "tag": "search_hospital_by_params",
-      "patterns": [],
-      "responses": ["Please provide hospital type"],
-      "context": ["search_hospital_by_type"]
-    },
-    {
-      "tag": "search_hospital_by_type",
-      "patterns": [],
-      "responses": ["Loading hospital details"],
       "context": [""]
     }
   ]
