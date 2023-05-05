@@ -71,6 +71,48 @@
       "context": [""]
     },
     {
+      "tag": "transportation",
+      "patterns": [
+        "How do I get to Anuradhapura?",
+        "Is there public transportation available in Polonnaruwa?",
+        "What is the best way to travel between Anuradhapura and Polonnaruwa?",
+        "Are there any taxi services in the North Central Province?"
+      ],
+      "responses": [
+        "You can reach Anuradhapura by train or bus from Colombo or other major cities in Sri Lanka. Public transportation is available in Polonnaruwa, including buses and tuk-tuks. The best way to travel between Anuradhapura and Polonnaruwa is by car or bus. There are also taxi services available in the North Central Province, such as PickMe and Uber.",
+        "There are many transportation options available in the North Central Province, including buses, trains, tuk-tuks, and taxis. Which one would you like to know more about?"
+      ]
+    },
+     {
+      "tag": "accommodation",
+      "patterns": [
+        "Can you recommend a good hotel in Anuradhapura?",
+        "Where can I find affordable accommodation in Polonnaruwa?",
+        "What are some popular resorts in the North Central Province?",
+        "Do you have any suggestions for budget-friendly accommodations in Anuradhapura?"
+      ],
+      "responses": [
+        "There are many hotels and resorts in Anuradhapura and Polonnaruwa, ranging from budget-friendly options to luxury accommodations. Some popular choices include The Lakeside at Nuwarawewa, The Heritage Hotel, and The Village Polonnaruwa.",
+        "There are many affordable accommodation options in Polonnaruwa, such as guesthouses and homestays. Some popular choices include Kivga Guest House, New Tour Inn, and Polonnaruwa Rest House."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "attractions",
+      "patterns": [
+        "What are some attractions in Anuradhapura?",
+        "Can you recommend some places to visit in Polonnaruwa?",
+        "What are the top tourist spots in North Central Province?",
+        "Which historical sites should I visit in Anuradhapura?"
+      ],
+      "responses": [
+        "Anuradhapura has many ancient ruins and historical sites, such as the Sri Maha Bodhi, Ruwanwelisaya, and Jetavanaramaya. In Polonnaruwa, you can visit the Royal Palace, Gal Vihara, and the Parakrama Samudra lake. Other popular attractions in the North Central Province include the Ritigala Forest Reserve and the Minneriya National Park.",
+        "There are many attractions in the North Central Province, such as the ancient cities of Anuradhapura and Polonnaruwa, the Ritigala Forest Reserve, and the Minneriya National Park. Which one would you like to know more about?"
+      ],
+      "context": [""]
+    },
+
+    {
       "tag": "food_and_drinks",
       "patterns": [
         "Where can I find good food in the North Central Province?",

@@ -9,6 +9,7 @@ import pickle
 import numpy as np
 
 from keras.models import load_model
+from nltk.tokenize import sent_tokenize
 
 model = load_model('model.h5')
 import json
@@ -69,9 +70,13 @@ def getResponse(ints, intents_json):
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
         if (i['tag'] == tag):
-            result = random.choice(i['responses'])
+            responses = i['responses']
+            response = random.choice(responses)
+            # generate more varied response
+            sentences = sent_tokenize(response)
+            sentence = random.choice(sentences)
             break
-    return result
+    return sentence
 
 
 def chatbot_response(msg):
